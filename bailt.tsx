@@ -1,22 +1,22 @@
 import React, { useState } from 'react'
 import { View, Text, Button } from 'react-native'
 
-const randomRool = () => Math.floor(Math.random() * 5) + 1
+const randomRool = () => Math.floor(Math.random() * 6) + 1
 
 export default function App() {
-  const [diceRolls, setDiceRolls] = useState([])
+  const [xucsacs, setxucsax] = useState([])
 
   return (
     <View>
       <Button
         title="Roll dice!"
         onPress={() => {
-          setDiceRolls([...diceRolls, randomRool()])
+          setxucsax([...xucsacs, randomRool()])
         }}
       />
-      {diceRolls.map((diceRoll, index) => (
+      {xucsacs.map((xucsac, index) => (
         <Text style={{ fontSize: 24 }} key={index}>
-          {diceRoll}
+          {xucsac}
         </Text>
       ))}
     </View>
