@@ -10,7 +10,7 @@ const App = () => {
   const [count, setCount] = useState(0)
   return (
     <View style={style.bg_container}>
-      <View style={style.flex_row_1}>
+      <View style={style.flex_1}>
         <Image
           source={require('./assets/book.png')}
           style={style.img_book}
@@ -45,10 +45,12 @@ const App = () => {
         </View>
       </View>
 
-      <View>
-      
+      <View style={style.flex_2}>
+        <Text>Mã giảm giá đã lưu</Text>
       </View>
-
+      <View style={style.flex_3}></View>
+      <View style={style.flex_4}></View>
+      <View style={style.flex_5}></View>
     </View>
   );
 }
@@ -60,13 +62,34 @@ const style = StyleSheet.create({
     flexDirection:'column',
     flex:'1'
   },
+  flex_1:{
+    flexDirection:'row',
+    flex:'2',
+    backgroundColor:'red'
+  },
+  flex_2:{
+    flexDirection:'row',
+    flex:'2',
+    // backgroundColor:'blue'
+  },
+  flex_3:{
+    flexDirection:'row',
+    flex:'1',
+    backgroundColor:'red'
+  },
+  flex_4:{
+    flexDirection:'row',
+    flex:'1',
+    backgroundColor:'blue'
+  },
+  flex_5:{
+    flexDirection:'row',
+    flex:'2',
+    backgroundColor:'red'
+  },
   img_book:{
     marginLeft:13,
     marginTop:14.
-  },
-  flex_row_1:{
-    flexDirection:'row',
-    flex:'1',
   },
   content:{
     height:140,
@@ -125,10 +148,11 @@ const style = StyleSheet.create({
     borderRadius: 5,
   },
   text_mua:{
-    marginLeft:120,
+    marginLeft:100,
     color:'#134FEC',
     fontSize:12,
-  }
+  },
+  
 })
 export default App;
 
