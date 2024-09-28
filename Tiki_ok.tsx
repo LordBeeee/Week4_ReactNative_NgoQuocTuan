@@ -43,14 +43,49 @@ const App = () => {
             <Text style={style.text_mua}>Mua sau</Text>
           </View>
         </View>
+        
       </View>
 
       <View style={style.flex_2}>
-        <Text>Mã giảm giá đã lưu</Text>
+        <View style={style.row}>
+          <Text style={style.text_giamgia}>Mã giảm giá đã lưu</Text>
+          <Text style={style.text_5}>Xem tại đây</Text>
+        </View>
+        <View style={style.row}>
+          <TouchableOpacity style={style.button_1}>
+            <View style={style.row}>
+              <Image source={require('./assets/yellow_block.png')} style={style.img_folder}/>
+              <Text style={style.buttonText_1}>Mã giảm giá</Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity style={style.button_2}>
+              <Text style={style.buttonText_2}>Áp dụng</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-      <View style={style.flex_3}></View>
-      <View style={style.flex_4}></View>
-      <View style={style.flex_5}></View>
+      <View style={style.flex_3}>
+        <View style={style.row_white}>
+          <Text style={style.text_6}>Bạn có phiếu quà tặng Tiki/Got it/ Urbox?</Text>
+          <Text style={style.text_7}>Nhập tại đây?</Text>
+        </View>
+      </View>
+      <View style={style.flex_4}>
+        <View style={style.row_white}>
+          <Text style={style.text_8}>Tạm tính</Text>
+          <Text style={style.text_9}>141.800 đ</Text>
+        </View>
+      </View>
+      <View style={style.flex_5}>
+        <View style={style.row_white_1}>
+          <Text style={style.text_10}>Thành tiền</Text>
+          <Text style={style.text_11}>141.800 đ</Text>
+        </View>
+        <View style={style.bg_white}>
+          <TouchableOpacity style={style.button_3}>
+              <Text style={style.buttonText_3}>TIẾN HÀNH ĐẶT HÀNG</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 }
@@ -62,30 +97,40 @@ const style = StyleSheet.create({
     flexDirection:'column',
     flex:'1'
   },
+  row:{
+    flexDirection:'row',
+  },
+  row_white:{
+    flexDirection:'row',
+    backgroundColor:'#fff',
+    height:50,
+    marginTop:13,
+    width:360,
+  },
   flex_1:{
     flexDirection:'row',
     flex:'2',
-    backgroundColor:'red'
+    // backgroundColor:'red'
   },
   flex_2:{
-    flexDirection:'row',
+    flexDirection:'column',
     flex:'2',
     // backgroundColor:'blue'
   },
   flex_3:{
-    flexDirection:'row',
+    flexDirection:'column',
     flex:'1',
-    backgroundColor:'red'
+    backgroundColor:'#C4C4C4'
   },
   flex_4:{
     flexDirection:'row',
     flex:'1',
-    backgroundColor:'blue'
+    backgroundColor:'#C4C4C4'
   },
   flex_5:{
-    flexDirection:'row',
-    flex:'2',
-    backgroundColor:'red'
+    flexDirection:'column',
+    flex:'3',
+    backgroundColor:'#C4C4C4'
   },
   img_book:{
     marginLeft:13,
@@ -148,11 +193,126 @@ const style = StyleSheet.create({
     borderRadius: 5,
   },
   text_mua:{
-    marginLeft:100,
+    marginLeft:80,
     color:'#134FEC',
     fontSize:12,
   },
-  
+  text_giamgia:{
+    marginLeft:13,
+    marginTop:20,
+    fontWeight:700
+  },
+  text_5:{
+    fontSize:12,
+    color:'#134FEC',
+    marginTop:21,
+    marginLeft:18,
+  },
+  button_1: {
+    width: 208,
+    height: 45,
+    marginLeft:15,
+    marginTop:40,
+    // backgroundColor: 'yellow',
+    borderColor:'#808080',
+    borderWidth: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 5,
+  },
+  button_2: {
+    width: 99,
+    height: 45,
+    marginLeft:5,
+    marginTop:40,
+    backgroundColor: '#0A5EB7',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 5,
+  },
+  img_folder:{
+    marginTop:5,
+    marginRight:10,
+    marginLeft:-40,
+  },
+  buttonText_1:{
+    fontWeight:700,
+    fontSize:18,
+  },
+  buttonText_2:{
+    fontWeight:700,
+    fontSize:20,
+    color:'#fff'
+  },
+  text_6:{
+    fontSize:12,
+    fontWeight:700,
+    marginLeft:13,
+    marginTop:18,
+  },
+  text_7:{
+    fontSize:12,
+    color:'#134FEC',
+    marginLeft:5,
+    marginTop:18,
+  },
+  text_8:{
+    fontSize:18,
+    fontWeight:700,
+    fontFamily:'Roboto',
+    marginLeft:13,
+    marginTop:10
+  },
+  text_9:{
+    fontSize:18,
+    fontWeight:700,
+    fontFamily:'Roboto',
+    color:'#EE0D0D',
+    marginTop:10,
+    marginLeft:160,
+  },
+  text_10:{
+    fontSize:18,
+    fontWeight:700,
+    fontFamily:'Roboto',
+    color:'#808080',
+    marginLeft:13,
+    marginTop:10
+  },
+  text_11:{
+    fontSize:18,
+    fontWeight:700,
+    fontFamily:'Roboto',
+    color:'#EE0D0D',
+    marginTop:10,
+    marginLeft:145,
+  },
+  button_3: {
+    width: 331,
+    height: 45,
+    marginLeft:10,
+    // marginTop:40,
+    backgroundColor: '#E53935',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 5,
+  },
+  buttonText_3:{
+    fontWeight:700,
+    fontSize:20,
+    color:'#fff'
+  },
+  row_white_1:{
+    flexDirection:'row',
+    backgroundColor:'#fff',
+    height:50,
+    marginTop:90,
+    width:360,
+  },
+  bg_white:{
+    backgroundColor:'#fff',
+    height:65
+  }
 })
 export default App;
 
